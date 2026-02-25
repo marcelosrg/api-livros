@@ -1,4 +1,8 @@
 package io.github.marcelosrg.api_biblioteca.enums;
 
-public enum genero {
+public enum Genero {
+    FICCAO,
+    FANTASIA,
+    MISTERIO,
+    ROMANCE
 }
