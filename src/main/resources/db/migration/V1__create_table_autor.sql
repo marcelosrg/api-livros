@@ -1,6 +1,6 @@
-CREATE TABLE autor (
-    id uuid not null primary key,
-    nome varchar(100) not null,
-    dataNascimento date not null,
-    nacionalidade varchar (50)
+CREATE TABLE AUTOR (
+                       ID uuid not null primary key,
+                       NOME varchar(100) not null,
+                       DATANASCIMENTO date not null,
+                       NACIONALIDADE varchar (50)
 )

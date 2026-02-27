@@ -10,18 +10,26 @@ import java.util.UUID;
 
 @Entity
 @Data
-@Table(name = "autor", schema = "public")
+@Table(name = "AUTOR", schema = "public")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "ID")
     private UUID id;
-    private String name;
+
+    @Column(name = "NOME")
+    private String nome;
+
+    @Column(name = "DATANASCIMENTO")
     private LocalDate dataNascimento;
+
+    @Column(name = "NACIONALIDADE")
     private String nacionalidade;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "autor")
+
     private List<Livro> livros;
 
 }

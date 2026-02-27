@@ -11,18 +11,29 @@ import java.util.UUID;
 
 @Entity
 @Data
-@Table(name = "livro", schema = "public")
+@Table(name = "LIVRO", schema = "public")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Livro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "ID")
     private UUID id;
+
+    @Column(name = "ISBN")
     private String isbn;
+
+    @Column(name = "TITULO")
     private String titulo;
+
+    @Column(name = "DATAPUBLICACAO")
     private LocalDate dataPublicacao;
+
+    @Column(name = "PRECO")
     private BigDecimal preco;
+
+    @Column(name = "GENERO")
     @Enumerated(EnumType.STRING)
     private Genero genero;
 
